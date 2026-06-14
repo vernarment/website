@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>caara // space</title>
+    <style>
+        .screen-container {
+            background-color: #fffef7; 
+            width: 1400px;             /* Сделали холст очень широким, чтобы полосы сузились в 2 раза */
+            max-width: 90%;            /* Страховка, чтобы на маленьких экранах сайт не вылезал */
+            min-height: 100vh;         
+            box-sizing: border-box;
+            padding: 60px 40px;
+            position: relative;        /* Для фиксации часов в углу белого окна */
+            
+            display: flex;
+	    flex-wrap: wrap;
+	    gap: 15px;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+        }
+
+        h2 {
+            color: #343025; 
+            font-size: 2.4rem;
+            font-style: italic;
+            font-weight: normal;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+
+        /* Твоя картинка */
+        .cover-image {
+            width: 550px;              /* Картинка крупная, не сжимается */
+            height: auto;
+            filter: contrast(1.1) saturate(0.9);
+        }
+    </style>
+</head>
+<body>
+
+        <h2>waste</h2>
+	    <img class="cover-image" src="https://i.pinimg.com/736x/12/f2/85/12f2859892ed979df7c0c897c4236c82.jpg" alt="Analog Space">
+	    <img class="cover-image" src="https://i.pinimg.com/1200x/fb/53/04/fb5304a3b825f197de1dc318b7aff763.jpg" alt="Analog Space">
+	    <img class="cover-image" src="https://i.pinimg.com/736x/dd/d0/f5/ddd0f5bc6743265c573f3d6b8fc700b2.jpg" alt="Analog Space">
+	    <img class="cover-image" src="https://i.imgur.com/x4xk6Cd.png" alt="Analog Space">
+	    <img class="cover-image" src="https://i.pinimg.com/1200x/51/a6/e5/51a6e55d4c5ffe8ec012caa85c8e7b92.jpg" alt="Analog Space">
+            <img class="cover-image" src="https://i.pinimg.com/736x/ac/04/25/ac04254e54f0f115376b27d1b7bf221b.jpg" alt="Analog Space">
+</body>
+</html>
