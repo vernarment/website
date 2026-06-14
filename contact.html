@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>caara // space</title>
+    <style>
+        /* Боковые полосы */
+        html, body {
+            background-color: #161616; 
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            font-family: "Times New Roman", Times, serif;
+        }
+        
+        /* Главная рабочая область сайта */
+        .screen-container {
+            background-color: #fffef7; 
+            width: 1400px;             /* Сделали холст очень широким, чтобы полосы сузились в 2 раза */
+            max-width: 90%;            /* Страховка, чтобы на маленьких экранах сайт не вылезал */
+            min-height: 100vh;         
+            box-sizing: border-box;
+            padding: 60px 40px;
+            position: relative;        /* Для фиксации часов в углу белого окна */
+            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+        }
+
+        h1 {
+            color: #343025; 
+            font-size: 2.4rem;
+            font-style: italic;
+            font-weight: normal;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+
+        /* Контейнер для ссылок и картинки */
+        .main-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;                 /* Свободный зазор между меню и картиной */
+            width: 100%;
+        }
+
+        /* Вертикальное меню слева */
+        .side-menu {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            font-size: 1.2rem;
+            font-style: italic;
+            white-space: nowrap;
+        }
+        .side-menu a {
+            color: #0000ff;
+            text-decoration: underline;
+            margin-bottom: 12px;
+        }
+
+        .side-menu a:hover {
+            color: #ff0000;
+        }
+
+        /* Твоя картинка */
+        .cover-image {
+            width: 550px;              /* Картинка крупная, не сжимается */
+            height: 422px;
+            display: block;
+            filter: contrast(1.1) saturate(0.9);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="screen-container">
+        
+        <div style="position: absolute; bottom: 25px; right: 30px; font-style: italic; font-size: 0.95rem; color: #0000ff; text-transform: uppercase; user-select: none; letter-spacing: 1px;">
+            LOCAL TIME - <span id="clock">00:00:00 AM</span>
+        </div>
+
+        <h1>caara</h1>
+
+        <div class="main-content">
+            <div class="side-menu">
+                <div>mail</div>
+		<br>
+		<div>gdvmirae@gmail.com</div>
+                <a href="index.html">back</a>
+            </div>
+            <img class="cover-image" src="https://i.imgur.com/P1vl7WP.png" alt="Analog Space">
+        </div>
+
+    </div>
+
+    <script>
+        function updateClock() {
+            const clockElement = document.getElementById('clock');
+            const now = new Date();
+            const options = {
+                timeZone: 'Asia/Yekaterinburg',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: true
+            };
+            const formatter = new Intl.DateTimeFormat('en-US', options);
+            clockElement.textContent = formatter.format(now);
+        }
+        updateClock();
+        setInterval(updateClock, 500);
+    </script>
+</body>
+</html>
