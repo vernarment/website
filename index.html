@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>caara // space</title>
     <style>
-        /* Боковые полосы */
         html, body {
             background-color: #161616; 
             margin: 0;
@@ -17,15 +16,14 @@
             font-family: "Times New Roman", Times, serif;
         }
         
-        /* Главная рабочая область сайта */
         .screen-container {
             background-color: #fffef7; 
-            width: 1400px;             /* Сделали холст очень широким, чтобы полосы сузились в 2 раза */
-            max-width: 90%;            /* Страховка, чтобы на маленьких экранах сайт не вылезал */
+            width: 1400px;
+            max-width: 90%;
             min-height: 100vh;         
             box-sizing: border-box;
             padding: 60px 40px;
-            position: relative;        /* Для фиксации часов в углу белого окна */
+            position: relative;
             
             display: flex;
             flex-direction: column;
@@ -46,16 +44,14 @@
             margin-bottom: 40px;
         }
 
-        /* Контейнер для ссылок и картинки */
         .main-content {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 50px;                 /* Свободный зазор между меню и картиной */
+            gap: 50px;
             width: 100%;
         }
 
-        /* Вертикальное меню слева */
         .side-menu {
             display: flex;
             flex-direction: column;
@@ -74,9 +70,8 @@
             color: #ff0000;
         }
 
-        /* Твоя картинка */
         .cover-image {
-            width: 550px;              /* Картинка крупная, не сжимается */
+            width: 550px;
             height: auto;
             display: block;
             filter: contrast(1.1) saturate(0.9);
